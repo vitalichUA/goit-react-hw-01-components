@@ -1,17 +1,21 @@
-import { AppBar } from './AppBar';
-import { VideoInfo } from './VideoInfo';
-import { VideoPlayer } from './VideoPlayer';
+import { Profile } from "./Profile/Profile";
+import { Statistics } from "./Statistics/Statistics";
+import { FriendList } from "./FriendList/FriendList";
+import { TransactionHistory } from "./TransactionHistory/TransactionHistory";
+import data from '../components/Statistics/data.json';
+import friends from './FriendList/friends.json'
+import transactions from './TransactionHistory/transactions.json'
+
+
 
 export const App = () => {
   return (
     <div>
-      <AppBar />
-      <VideoPlayer url="https://youtu.be/Pj-h6MEgE7I" />
-      <VideoInfo
-        title="You Are Not Where You Think You Are"
-        views="5,709,844"
-        uploadDate="May 17, 2022"
+      <Profile
       />
+      <Statistics title="Upload stats" items={data} />
+      <FriendList items={friends} />
+      <TransactionHistory items={transactions}/>
     </div>
   );
 };
