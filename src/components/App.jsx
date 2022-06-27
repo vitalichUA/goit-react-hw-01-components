@@ -5,6 +5,7 @@ import { TransactionHistory } from "./TransactionHistory/TransactionHistory";
 import data from '../components/Statistics/data.json';
 import friends from './FriendList/friends.json'
 import transactions from './TransactionHistory/transactions.json'
+import { Box } from "./Box";
 
 
 
@@ -13,7 +14,9 @@ export const App = () => {
     <div>
       <Profile
       />
-      <Statistics title="Upload stats" items={data} />
+      <Box display ="flex">
+        <Statistics title="Upload stats" items={data} />
+        </Box>
       <FriendList items={friends} />
       <TransactionHistory items={transactions}/>
     </div>
