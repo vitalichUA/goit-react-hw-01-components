@@ -1,18 +1,20 @@
 import PropTypes from 'prop-types';
+import { Box } from 'utils/Box';
+import {StyledFriendList, FriendListItem, StatusBar} from './FriendList.styled'
 
 export const FriendList = ({ items }) => {
     return (
-        <div>
-            <ul>
+        <Box display="flex" p={4}>
+            <StyledFriendList>
                 {items.map(item => (
-                    <li key={item.id}>
-                        <span>{item.isOnline ? "online" : "offline" }</span>
+                    <FriendListItem key={item.id}>
+                        <StatusBar status={item.isOnline}></StatusBar>
   <img src={item.avatar} alt="User avatar" width="48" />
-                        <p>{item.name }</p>
-                        </li>
+                        <p>{item.name}</p>
+                        </FriendListItem>
                 ))}
-            </ul>
-        </div>
+            </StyledFriendList>
+        </Box>
     )
 }
 

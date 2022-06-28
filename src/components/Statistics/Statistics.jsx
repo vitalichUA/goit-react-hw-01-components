@@ -1,21 +1,23 @@
+import { Box } from 'utils/Box';
 import PropTypes from 'prop-types';
+import {StatList, StatItem} from './Statistics.styled'
 
 export const Statistics = ({title, items }) => {
     
     return (
-        <section>
+        <Box p={4} display = "flex" flexDirection="column" alignItems="center">
             <h2>{title}</h2>
-        <ul>
+        <StatList>
             {items.map(item => (
-                <li key={item.id}>
+                <StatItem key={item.id}>
       <span>{item.label}</span>
       <span>{item.percentage} %</span>
-    </li>
+    </StatItem>
             )
                 )}
 
-            </ul>
-            </section>
+            </StatList>
+            </Box>
     )
 }
 
