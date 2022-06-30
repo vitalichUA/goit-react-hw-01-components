@@ -10,15 +10,17 @@ export const Statistics = ({title, items }) => {
             flexDirection="column"
             alignItems="center">
             <h2>{title}</h2>
-         <StatList>
-            {items.map(item => (
-                <StatItem key={item.id}>
-                 <span>{item.label}</span>
-                <span>{item.percentage} %</span>
-        </StatItem>
+                <StatList>
+                    {items.map(item => (
+                        <StatItem key={item.id}>
+                            <span>{item.label}</span>
+                            <span>{item.percentage} %</span>
+                </StatItem>
             ))}
-            </StatList>
-            </Box>)}
+                </StatList>
+        </Box>
+    )
+}
 
 Statistics.protTypes = {
     id: PropTypes.string,

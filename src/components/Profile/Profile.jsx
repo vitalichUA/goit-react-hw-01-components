@@ -20,26 +20,25 @@ export const Profile = ( ) => {
                 alignItems="center" pb='16'>
                 <UserAvatar src={avatar} alt="" />
                 <Username>{username}</Username>
-                <UserTag>  {tag} </UserTag>
-                <p> {location} </p>
+                <UserTag>{tag}</UserTag>
+                <p>{location}</p>
             </Box>
             
-            <StyledInfo>
-            <UserItemInfo>
-                <span>Followers </span>
-                <UserInfoTag>{stats.followers}</UserInfoTag>
-            </UserItemInfo>
-            <UserItemInfo>
-                <span>Views </span>
-                <UserInfoTag>{stats.views}</UserInfoTag>
-            </UserItemInfo>
-            <UserItemInfo>
-                <span>Likes </span>
-                <UserInfoTag>{stats.likes}</UserInfoTag>
+                <StyledInfo>
+                    <UserItemInfo>
+                        <span>Followers </span>
+                        <UserInfoTag>{stats.followers}</UserInfoTag>
                     </UserItemInfo>
-                    </StyledInfo>
+                    <UserItemInfo>
+                        <span>Views </span>
+                        <UserInfoTag>{stats.views}</UserInfoTag>
+                    </UserItemInfo>
+                    <UserItemInfo>
+                        <span>Likes </span>
+                        <UserInfoTag>{stats.likes}</UserInfoTag>
+                    </UserItemInfo>
+                </StyledInfo>
         </Box>
-           
     )
 }
 

@@ -11,7 +11,7 @@ export const TransactionHistory = ({items}) => {
       justifyContent="center"
       p='16'>
         <table >
-           <thead>
+          <thead>
               <TableHead>Type</TableHead>
               <TableHead>Amount</TableHead>
               <TableHead>Currency</TableHead>
@@ -19,13 +19,13 @@ export const TransactionHistory = ({items}) => {
           <tbody>
           {items.map(item => 
               <tr key={item.id}>
-              <TableData>{item.type}</TableData>
-              <TableData>{item.amount }</TableData>
-              <TableData>{item.currency}</TableData>
+                <TableData>{item.type}</TableData>
+                <TableData>{item.amount }</TableData>
+                <TableData>{item.currency}</TableData>
               </tr>)}
           </tbody>
       </table>
-      </Box>
+    </Box>
 )
 }
 
