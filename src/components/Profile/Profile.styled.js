@@ -2,16 +2,16 @@ import styled from 'styled-components';
 
 export const UserAvatar = styled.img`
 width: 150px;
-margin-bottom: ${p => p.theme.space[4]}px
+margin-bottom: ${p => p.theme.space[16]}
 `
 
 export const Username = styled.p`
-margin-bottom: ${p => p.theme.space[3]}px;
+margin-bottom: ${p => p.theme.space[8]};
 font-size: ${p => p.theme.fontSizes.l}
 `
 
 export const UserTag = styled.p`
-margin-bottom: ${p => p.theme.space[3]}px;
+margin-bottom: ${p => p.theme.space[8]};
 `
 
 
@@ -31,6 +31,6 @@ export const UserItemInfo = styled.li`
 `
 
 export const UserInfoTag = styled.span`
-padding: ${p => p.theme.space[2]}px;
+padding: ${p => p.theme.space[4]};
 font-weight: ${p => p.theme.fontWeights.bold}
 `
